@@ -1,3 +1,5 @@
+'use client'
+
 import { MotionDiv } from './MotionWrapper'
 
 interface NotificationProps {
@@ -6,7 +8,7 @@ interface NotificationProps {
   content: string
   actions: {
     label: string
-    onClick: () => void
+    href?: string
   }[]
 }
 
@@ -25,13 +27,13 @@ export default function Notification({ title, time, content, actions }: Notifica
       <p className="notification-content">{content}</p>
       <div className="notification-actions">
         {actions.map((action, index) => (
-          <button
+          <a
             key={index}
-            onClick={action.onClick}
+            href={action.href || '#'}
             className="notification-action"
           >
             {action.label}
-          </button>
+          </a>
         ))}
       </div>
     </MotionDiv>

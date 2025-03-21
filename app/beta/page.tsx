@@ -15,16 +15,16 @@ export default function Beta() {
               transition={{ duration: 0.8 }}
             >
               <h1 className="heading-1 mb-6">
-                Werden Sie Beta-Tester
+                Become a Beta Tester
               </h1>
               <p className="text-body mb-8">
-                Seien Sie unter den Ersten, die die Zukunft der Beziehungsoptimierung erleben. Helfen Sie uns, Synapse durch wertvolles Feedback und Einblicke zu gestalten.
+                Be among the first to experience the future of relationship optimization. Help us shape Synapse through valuable feedback and insights.
               </p>
               <a
                 href="mailto:beta@sen.studio"
                 className="inline-block bg-synapse-gold text-white px-8 py-3 rounded-full hover:bg-synapse-lime transition-colors"
               >
-                Als Beta-Tester bewerben
+                Apply as Beta Tester
               </a>
             </MotionDiv>
             <MotionDiv
@@ -35,7 +35,7 @@ export default function Beta() {
             >
               <Image
                 src="/images/beta-hero.png"
-                alt="Beta-Programm"
+                alt="Beta Program"
                 fill
                 className="object-contain"
                 priority
@@ -48,35 +48,35 @@ export default function Beta() {
       {/* Example Notifications */}
       <section className="section">
         <div className="container-full">
-          <h2 className="heading-2 text-center mb-12">Beispiel-Benachrichtigungen</h2>
+          <h2 className="heading-2 text-center mb-12">Example Notifications</h2>
           
           <Notification
-            title="Geburtstagserinnerung"
-            time="Vor 2 Stunden"
-            content="Der Geburtstag deiner Partnerin ist in 3 Tagen. Möchtest du Blumen bestellen?"
+            title="Birthday Reminder"
+            time="2 hours ago"
+            content="Your partner's birthday is in 3 days. Would you like to order flowers?"
             actions={[
-              { label: "Blumen bestellen", onClick: () => {} },
-              { label: "Später erinnern", onClick: () => {} }
+              { label: "Order Flowers", href: "https://example.com/flowers" },
+              { label: "Remind Later", href: "#" }
             ]}
           />
 
           <Notification
-            title="Emotionale Analyse"
-            time="Vor 1 Stunde"
-            content="Deine Partnerin scheint heute gestresst zu sein. Möchtest du sie unterstützen?"
+            title="Emotional Analysis"
+            time="1 hour ago"
+            content="Your partner seems stressed today. Would you like to offer support?"
             actions={[
-              { label: "Nachfragen", onClick: () => {} },
-              { label: "Später", onClick: () => {} }
+              { label: "Check In", href: "#" },
+              { label: "Later", href: "#" }
             ]}
           />
 
           <Notification
-            title="Gemeinsame Zeit"
-            time="Vor 30 Minuten"
-            content="Du hast heute Abend Zeit. Soll ich einen Tisch im Lieblingsrestaurant reservieren?"
+            title="Quality Time"
+            time="30 minutes ago"
+            content="You have time tonight. Should I reserve a table at your favorite restaurant?"
             actions={[
-              { label: "Tisch reservieren", onClick: () => {} },
-              { label: "Andere Idee", onClick: () => {} }
+              { label: "Reserve Table", href: "https://example.com/restaurant" },
+              { label: "Other Idea", href: "#" }
             ]}
           />
         </div>
@@ -85,37 +85,37 @@ export default function Beta() {
       {/* Program Details */}
       <section className="section bg-gray-50">
         <div className="container-full">
-          <h2 className="heading-2 text-center mb-12">Beta-Programm Details</h2>
+          <h2 className="heading-2 text-center mb-12">Beta Program Details</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <MotionDiv
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-lg"
             >
-              <h3 className="heading-3 mb-6">Was Sie bekommen</h3>
+              <h3 className="heading-3 mb-6">What You Get</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Frühzeitiger Zugang zu allen Funktionen</span>
+                  <span className="text-body">Early access to all features</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Direkter Einfluss auf die Produktentwicklung</span>
+                  <span className="text-body">Direct influence on product development</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Exklusiver Zugang zur Beta-Tester-Community</span>
+                  <span className="text-body">Exclusive access to beta tester community</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Lebenslanger Zugang zu Premium-Funktionen</span>
+                  <span className="text-body">Lifetime access to premium features</span>
                 </li>
               </ul>
             </MotionDiv>
@@ -124,31 +124,31 @@ export default function Beta() {
               whileHover={{ y: -5 }}
               className="bg-white p-8 rounded-lg"
             >
-              <h3 className="heading-3 mb-6">Was wir von Ihnen erwarten</h3>
+              <h3 className="heading-3 mb-6">What We Expect</h3>
               <ul className="space-y-4">
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Regelmäßiges Feedback und Bug-Reports</span>
+                  <span className="text-body">Regular feedback and bug reports</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Teilnahme an Benutzerinterviews</span>
+                  <span className="text-body">Participation in user interviews</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Testen neuer Funktionen bei der Einführung</span>
+                  <span className="text-body">Testing new features upon release</span>
                 </li>
                 <li className="flex items-start">
                   <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
-                  <span className="text-body">Teilen Sie Ihre Erfahrungen mit anderen</span>
+                  <span className="text-body">Share your experiences with others</span>
                 </li>
               </ul>
             </MotionDiv>
@@ -159,7 +159,7 @@ export default function Beta() {
       {/* Timeline */}
       <section className="section">
         <div className="container-full">
-          <h2 className="heading-2 text-center mb-12">Zeitplan des Beta-Programms</h2>
+          <h2 className="heading-2 text-center mb-12">Beta Program Timeline</h2>
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
             <div className="space-y-24">
@@ -169,9 +169,9 @@ export default function Beta() {
               >
                 <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-synapse-gold rounded-full"></div>
                 <div className="w-1/2 ml-auto pl-8">
-                  <h3 className="heading-3 mb-4">März 2025</h3>
+                  <h3 className="heading-3 mb-4">March 2025</h3>
                   <p className="text-body">
-                    Bewerbungen für das Beta-Programm starten
+                    Beta program applications open
                   </p>
                 </div>
               </MotionDiv>
@@ -184,7 +184,7 @@ export default function Beta() {
                 <div className="w-1/2 pr-8">
                   <h3 className="heading-3 mb-4">April 2025</h3>
                   <p className="text-body">
-                    Erste Beta-Tester werden onboarded
+                    First beta testers onboarded
                   </p>
                 </div>
               </MotionDiv>
@@ -197,7 +197,7 @@ export default function Beta() {
                 <div className="w-1/2 ml-auto pl-8">
                   <h3 className="heading-3 mb-4">August 2025</h3>
                   <p className="text-body">
-                    Beta-Test-Programm endet
+                    Beta testing program ends
                   </p>
                 </div>
               </MotionDiv>
@@ -210,7 +210,7 @@ export default function Beta() {
                 <div className="w-1/2 pr-8">
                   <h3 className="heading-3 mb-4">September 2025</h3>
                   <p className="text-body">
-                    Offizieller Launch mit Ihrem Feedback
+                    Official launch with your feedback
                   </p>
                 </div>
               </MotionDiv>
@@ -222,7 +222,7 @@ export default function Beta() {
       {/* Requirements */}
       <section className="section bg-gray-50">
         <div className="container-full">
-          <h2 className="heading-2 text-center mb-12">Anforderungen für Beta-Tester</h2>
+          <h2 className="heading-2 text-center mb-12">Beta Tester Requirements</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <MotionDiv
               whileHover={{ y: -5 }}
@@ -233,9 +233,9 @@ export default function Beta() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="heading-3 mb-4">Zeitaufwand</h3>
+              <h3 className="heading-3 mb-4">Time Commitment</h3>
               <p className="text-body">
-                2-3 Stunden pro Woche für Tests und Feedback
+                2-3 hours per week for testing and feedback
               </p>
             </MotionDiv>
 
@@ -248,9 +248,9 @@ export default function Beta() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="heading-3 mb-4">Geräteanforderungen</h3>
+              <h3 className="heading-3 mb-4">Device Requirements</h3>
               <p className="text-body">
-                iOS 15+ oder Android 8+ Gerät
+                iOS 15+ or Android 8+ device
               </p>
             </MotionDiv>
 
@@ -263,9 +263,9 @@ export default function Beta() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
                 </svg>
               </div>
-              <h3 className="heading-3 mb-4">Kommunikation</h3>
+              <h3 className="heading-3 mb-4">Communication</h3>
               <p className="text-body">
-                Deutschkenntnisse für Feedback und Interviews
+                English language skills for feedback and interviews
               </p>
             </MotionDiv>
           </div>
@@ -275,15 +275,15 @@ export default function Beta() {
       {/* CTA */}
       <section className="section">
         <div className="container-full text-center">
-          <h2 className="heading-2 mb-6">Bereit mitzumachen?</h2>
+          <h2 className="heading-2 mb-6">Ready to Join?</h2>
           <p className="text-body mb-8 max-w-2xl mx-auto">
-            Gestalten Sie die Zukunft der Beziehungsoptimierung mit. Bewerben Sie sich jetzt für unser Beta-Programm.
+            Help shape the future of relationship optimization. Apply now for our beta program.
           </p>
           <a
             href="mailto:beta@sen.studio"
             className="inline-block bg-synapse-gold text-white px-8 py-3 rounded-full hover:bg-synapse-lime transition-colors"
           >
-            Als Beta-Tester bewerben
+            Apply as Beta Tester
           </a>
         </div>
       </section>
