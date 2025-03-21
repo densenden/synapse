@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 252, 245, 245;
+  --background-end-rgb: 235, 253, 253;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-synapse-gold text-white px-6 py-3 rounded-full hover:bg-synapse-lime transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-synapse-lavender px-6 py-3 rounded-full hover:bg-synapse-cream transition-colors;
+  }
+  
+  .card {
+    @apply bg-white p-8 rounded-lg shadow-lg;
+  }
+} 

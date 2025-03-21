@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { motion } from 'framer-motion'
+import { MotionDiv } from '../components/MotionWrapper'
 
 export default function Collaborators() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-synapse-cream to-synapse-mint pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
+        <MotionDiv
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -17,10 +17,10 @@ export default function Collaborators() {
           <p className="text-xl text-synapse-gold">
             Werden Sie Teil unseres wachsenden Ökosystems
           </p>
-        </motion.div>
+        </MotionDiv>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <motion.div
+          <MotionDiv
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
@@ -43,9 +43,9 @@ export default function Collaborators() {
             >
               Partner werden
             </a>
-          </motion.div>
+          </MotionDiv>
 
-          <motion.div
+          <MotionDiv
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
@@ -60,10 +60,10 @@ export default function Collaborators() {
               <li>• Revenue-Sharing Möglichkeiten</li>
               <li>• Technische Integration Support</li>
             </ul>
-          </motion.div>
+          </MotionDiv>
         </div>
 
-        <motion.div
+        <MotionDiv
           whileHover={{ scale: 1.02 }}
           className="bg-white p-8 rounded-lg shadow-lg mb-16"
         >
@@ -79,7 +79,7 @@ export default function Collaborators() {
           >
             Mehr erfahren
           </Link>
-        </motion.div>
+        </MotionDiv>
       </div>
     </main>
   )

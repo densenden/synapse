@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { MotionDiv } from './components/MotionWrapper'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
@@ -29,7 +29,7 @@ export default function Home() {
 
       <section className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
-          <MotionDiv
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -50,14 +50,14 @@ export default function Home() {
             >
               Jetzt für Beta Testing bewerben
             </Link>
-          </MotionDiv>
+          </motion.div>
         </div>
       </section>
 
       <section className="py-16 bg-white/50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <MotionDiv
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white p-6 rounded-lg shadow-lg"
             >
@@ -67,8 +67,8 @@ export default function Home() {
               <p className="text-synapse-lavender">
                 Entdecken Sie die Zukunft der KI-gestützten Beziehungsoptimierung
               </p>
-            </MotionDiv>
-            <MotionDiv
+            </motion.div>
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white p-6 rounded-lg shadow-lg"
             >
@@ -78,8 +78,8 @@ export default function Home() {
               <p className="text-synapse-lavender">
                 Werden Sie Teil unseres wachsenden Ökosystems
               </p>
-            </MotionDiv>
-            <MotionDiv
+            </motion.div>
+            <motion.div
               whileHover={{ scale: 1.05 }}
               className="bg-white p-6 rounded-lg shadow-lg"
             >
@@ -89,7 +89,7 @@ export default function Home() {
               <p className="text-synapse-lavender">
                 Seien Sie unter den ersten, die Synapse erleben
               </p>
-            </MotionDiv>
+            </motion.div>
           </div>
         </div>
       </section>

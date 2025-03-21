@@ -1,78 +1,85 @@
 import Link from 'next/link'
-import { MotionDiv } from '../components/MotionWrapper'
+import { motion } from 'framer-motion'
 
-export default function Investors() {
+export default function Collaborators() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-synapse-cream to-synapse-mint pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <MotionDiv
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
           <h1 className="text-4xl font-bold text-synapse-lavender mb-4">
-            Für Investoren
+            Für Partner
           </h1>
           <p className="text-xl text-synapse-gold">
-            Investieren Sie in die Zukunft der KI-gestützten Beziehungsoptimierung
+            Werden Sie Teil unseres wachsenden Ökosystems
           </p>
-        </MotionDiv>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <MotionDiv
+          <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
             <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-              Pitchdeck
+              Partner werden
             </h2>
             <p className="text-synapse-lavender mb-6">
-              Erfahren Sie mehr über unsere Vision, Technologie und Wachstumsstrategie
+              Synapse sucht nach strategischen Partnern, die unsere Vision teilen und uns helfen, die Zukunft der Beziehungsoptimierung zu gestalten.
             </p>
-            <Link
-              href="/Pitchdeck_Synapse-The-Smart-Partnership-Optimization-App.pdf"
+            <ul className="space-y-4 text-synapse-lavender mb-6">
+              <li>• Therapeuten & Coaches</li>
+              <li>• Beziehungsberater</li>
+              <li>• Technologiepartner</li>
+              <li>• Content Creator</li>
+              <li>• Forschungsinstitute</li>
+            </ul>
+            <a
+              href="mailto:partners@synapse.ai"
               className="inline-block bg-synapse-gold text-white px-6 py-3 rounded-full hover:bg-synapse-lime transition-colors"
             >
-              Pitchdeck herunterladen
-            </Link>
-          </MotionDiv>
+              Partner werden
+            </a>
+          </motion.div>
 
-          <MotionDiv
+          <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
             <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-              Investment Details
+              Vorteile
             </h2>
             <ul className="space-y-4 text-synapse-lavender">
-              <li>• Seed Funding: $100k</li>
-              <li>• MVP Entwicklung: März-Juli 2025</li>
-              <li>• Beta Testing: August 2025</li>
-              <li>• Launch: September 2025</li>
-              <li>• Freemium Geschäftsmodell</li>
-              <li>• Datenschutz-First Ansatz</li>
+              <li>• Früher Zugang zu neuen Features</li>
+              <li>• Direkter Einfluss auf Produktentwicklung</li>
+              <li>• Marketing & Promotion Support</li>
+              <li>• Exklusive Partner-Events</li>
+              <li>• Revenue-Sharing Möglichkeiten</li>
+              <li>• Technische Integration Support</li>
             </ul>
-          </MotionDiv>
+          </motion.div>
         </div>
 
-        <MotionDiv
+        <motion.div
           whileHover={{ scale: 1.02 }}
           className="bg-white p-8 rounded-lg shadow-lg mb-16"
         >
           <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-            Kontakt
+            Partner-Programm
           </h2>
           <p className="text-synapse-lavender mb-6">
-            Interessiert an einer Investition? Lassen Sie uns sprechen.
+            Unser Partner-Programm bietet verschiedene Stufen der Zusammenarbeit, von einfachen Affiliate-Partnerschaften bis hin zu tiefen technischen Integrationen.
           </p>
-          <a
-            href="mailto:investors@synapse.ai"
+          <Link
+            href="/partner-programm"
             className="inline-block bg-synapse-gold text-white px-6 py-3 rounded-full hover:bg-synapse-lime transition-colors"
           >
-            Kontakt aufnehmen
-          </a>
-        </MotionDiv>
+            Mehr erfahren
+          </Link>
+        </motion.div>
       </div>
     </main>
   )

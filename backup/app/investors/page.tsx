@@ -1,11 +1,11 @@
 import Link from 'next/link'
-import { MotionDiv } from '../components/MotionWrapper'
+import { motion } from 'framer-motion'
 
 export default function Investors() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-synapse-cream to-synapse-mint pt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <MotionDiv
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -17,10 +17,10 @@ export default function Investors() {
           <p className="text-xl text-synapse-gold">
             Investieren Sie in die Zukunft der KI-gestützten Beziehungsoptimierung
           </p>
-        </MotionDiv>
+        </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <MotionDiv
+          <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
@@ -36,9 +36,9 @@ export default function Investors() {
             >
               Pitchdeck herunterladen
             </Link>
-          </MotionDiv>
+          </motion.div>
 
-          <MotionDiv
+          <motion.div
             whileHover={{ scale: 1.02 }}
             className="bg-white p-8 rounded-lg shadow-lg"
           >
@@ -53,10 +53,10 @@ export default function Investors() {
               <li>• Freemium Geschäftsmodell</li>
               <li>• Datenschutz-First Ansatz</li>
             </ul>
-          </MotionDiv>
+          </motion.div>
         </div>
 
-        <MotionDiv
+        <motion.div
           whileHover={{ scale: 1.02 }}
           className="bg-white p-8 rounded-lg shadow-lg mb-16"
         >
@@ -72,7 +72,7 @@ export default function Investors() {
           >
             Kontakt aufnehmen
           </a>
-        </MotionDiv>
+        </motion.div>
       </div>
     </main>
   )
