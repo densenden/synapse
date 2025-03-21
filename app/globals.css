@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100;0,9..40,200;0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,100;1,9..40,200;1,9..40,300;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 252, 245, 245;
-  --background-end-rgb: 235, 253, 253;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 240, 240, 240;
 }
 
 body {
@@ -15,6 +17,7 @@ body {
     rgb(var(--background-start-rgb)),
     rgb(var(--background-end-rgb))
   );
+  font-family: 'DM Sans', sans-serif;
   min-height: 100vh;
 }
 
@@ -22,9 +25,41 @@ body {
   html {
     scroll-behavior: smooth;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
 }
 
 @layer components {
+  .container-full {
+    @apply w-full max-w-[100vw] px-4 sm:px-6 lg:px-8;
+  }
+  
+  .section {
+    @apply py-24;
+  }
+  
+  .heading-1 {
+    @apply text-6xl md:text-7xl font-bold tracking-tight;
+  }
+  
+  .heading-2 {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+  
+  .heading-3 {
+    @apply text-3xl md:text-4xl font-bold tracking-tight;
+  }
+  
+  .text-body {
+    @apply text-lg md:text-xl leading-relaxed;
+  }
+  
+  .text-small {
+    @apply text-sm md:text-base;
+  }
+  
   .btn-primary {
     @apply bg-synapse-gold text-white px-6 py-3 rounded-full hover:bg-synapse-lime transition-colors;
   }
