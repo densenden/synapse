@@ -1,13 +1,17 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import Link from 'next/link'
+import Footer from './components/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Synapse - Der KI-gestützte Beziehungsassistent',
-  description: 'Synapse ist ein KI-gestützter Beziehungsassistent, der Ihnen hilft, tiefere Verbindungen aufzubauen.',
+  title: 'Synapse - KI-gestützte Beziehungsoptimierung',
+  description: 'Optimieren Sie Ihre Beziehungen mit KI-gestützter Analyse und personalisierten Empfehlungen.',
+  keywords: 'Beziehungen, KI, Künstliche Intelligenz, Beziehungsoptimierung, Dating, Partnerschaft',
 }
 
 export default function RootLayout({
@@ -17,37 +21,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="de">
-      <body className={inter.className}>
-        <nav className="fixed w-full bg-white/80 backdrop-blur-md z-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between h-16">
-              <div className="flex items-center">
-                <Link href="/" className="text-2xl font-bold text-synapse-lavender">
-                  Synapse
-                </Link>
-              </div>
-              <div className="flex items-center space-x-8">
-                <Link href="/investors" className="text-synapse-lavender hover:text-synapse-gold">
-                  Für Investoren
-                </Link>
-                <Link href="/collaborators" className="text-synapse-lavender hover:text-synapse-gold">
-                  Für Partner
-                </Link>
-                <Link href="/beta" className="text-synapse-lavender hover:text-synapse-gold">
-                  Beta Testing
-                </Link>
-              </div>
-            </div>
-          </div>
-        </nav>
+      <body className={dmSans.className}>
         {children}
-        <footer className="bg-white/50 py-8">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center text-synapse-lavender">
-              <p>© 2024 Synapse. Alle Rechte vorbehalten.</p>
-            </div>
-          </div>
-        </footer>
+        <Footer />
       </body>
     </html>
   )

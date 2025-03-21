@@ -1,77 +1,292 @@
-import Link from 'next/link'
 import { MotionDiv } from '../components/MotionWrapper'
+import Image from 'next/image'
+import Notification from '../components/Notification'
 
 export default function Beta() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-synapse-cream to-synapse-mint pt-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <MotionDiv
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h1 className="text-4xl font-bold text-synapse-lavender mb-4">
-            Beta Testing
-          </h1>
-          <p className="text-xl text-synapse-gold">
-            Seien Sie unter den ersten, die Synapse erleben
-          </p>
-        </MotionDiv>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
-          <MotionDiv
-            whileHover={{ scale: 1.02 }}
-            className="bg-white p-8 rounded-lg shadow-lg"
-          >
-            <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-              Beta-Programm Details
-            </h2>
-            <ul className="space-y-4 text-synapse-lavender mb-6">
-              <li>• Start: August 2025</li>
-              <li>• Dauer: 4 Wochen</li>
-              <li>• Exklusiver Zugang zu allen Features</li>
-              <li>• Direkter Einfluss auf Produktentwicklung</li>
-              <li>• Persönliches Feedback-Gespräch</li>
-              <li>• 6 Monate kostenlose Nutzung nach Launch</li>
-            </ul>
-          </MotionDiv>
-
-          <MotionDiv
-            whileHover={{ scale: 1.02 }}
-            className="bg-white p-8 rounded-lg shadow-lg"
-          >
-            <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-              Anforderungen
-            </h2>
-            <ul className="space-y-4 text-synapse-lavender">
-              <li>• iOS oder Android Smartphone</li>
-              <li>• Bereitschaft für regelmäßiges Feedback</li>
-              <li>• Interesse an KI-gestützter Beziehungsoptimierung</li>
-              <li>• Zeit für wöchentliche Check-ins</li>
-              <li>• Offenheit für neue Technologien</li>
-            </ul>
-          </MotionDiv>
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="relative h-[60vh] flex items-center bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+        <div className="container-full">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <MotionDiv
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="heading-1 mb-6">
+                Werden Sie Beta-Tester
+              </h1>
+              <p className="text-body mb-8">
+                Seien Sie unter den Ersten, die die Zukunft der Beziehungsoptimierung erleben. Helfen Sie uns, Synapse durch wertvolles Feedback und Einblicke zu gestalten.
+              </p>
+              <a
+                href="mailto:beta@sen.studio"
+                className="inline-block bg-synapse-gold text-white px-8 py-3 rounded-full hover:bg-synapse-lime transition-colors"
+              >
+                Als Beta-Tester bewerben
+              </a>
+            </MotionDiv>
+            <MotionDiv
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[400px]"
+            >
+              <Image
+                src="/images/beta-hero.png"
+                alt="Beta-Programm"
+                fill
+                className="object-contain"
+                priority
+              />
+            </MotionDiv>
+          </div>
         </div>
+      </section>
 
-        <MotionDiv
-          whileHover={{ scale: 1.02 }}
-          className="bg-white p-8 rounded-lg shadow-lg mb-16"
-        >
-          <h2 className="text-2xl font-semibold text-synapse-lavender mb-6">
-            Bewerbung
-          </h2>
-          <p className="text-synapse-lavender mb-6">
-            Interessiert? Bewerben Sie sich jetzt für das Beta-Programm.
+      {/* Example Notifications */}
+      <section className="section">
+        <div className="container-full">
+          <h2 className="heading-2 text-center mb-12">Beispiel-Benachrichtigungen</h2>
+          
+          <Notification
+            title="Geburtstagserinnerung"
+            time="Vor 2 Stunden"
+            content="Der Geburtstag deiner Partnerin ist in 3 Tagen. Möchtest du Blumen bestellen?"
+            actions={[
+              { label: "Blumen bestellen", onClick: () => {} },
+              { label: "Später erinnern", onClick: () => {} }
+            ]}
+          />
+
+          <Notification
+            title="Emotionale Analyse"
+            time="Vor 1 Stunde"
+            content="Deine Partnerin scheint heute gestresst zu sein. Möchtest du sie unterstützen?"
+            actions={[
+              { label: "Nachfragen", onClick: () => {} },
+              { label: "Später", onClick: () => {} }
+            ]}
+          />
+
+          <Notification
+            title="Gemeinsame Zeit"
+            time="Vor 30 Minuten"
+            content="Du hast heute Abend Zeit. Soll ich einen Tisch im Lieblingsrestaurant reservieren?"
+            actions={[
+              { label: "Tisch reservieren", onClick: () => {} },
+              { label: "Andere Idee", onClick: () => {} }
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Program Details */}
+      <section className="section bg-gray-50">
+        <div className="container-full">
+          <h2 className="heading-2 text-center mb-12">Beta-Programm Details</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <MotionDiv
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-lg"
+            >
+              <h3 className="heading-3 mb-6">Was Sie bekommen</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Frühzeitiger Zugang zu allen Funktionen</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Direkter Einfluss auf die Produktentwicklung</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Exklusiver Zugang zur Beta-Tester-Community</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Lebenslanger Zugang zu Premium-Funktionen</span>
+                </li>
+              </ul>
+            </MotionDiv>
+
+            <MotionDiv
+              whileHover={{ y: -5 }}
+              className="bg-white p-8 rounded-lg"
+            >
+              <h3 className="heading-3 mb-6">Was wir von Ihnen erwarten</h3>
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Regelmäßiges Feedback und Bug-Reports</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Teilnahme an Benutzerinterviews</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Testen neuer Funktionen bei der Einführung</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-6 h-6 text-synapse-gold mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span className="text-body">Teilen Sie Ihre Erfahrungen mit anderen</span>
+                </li>
+              </ul>
+            </MotionDiv>
+          </div>
+        </div>
+      </section>
+
+      {/* Timeline */}
+      <section className="section">
+        <div className="container-full">
+          <h2 className="heading-2 text-center mb-12">Zeitplan des Beta-Programms</h2>
+          <div className="relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-gray-200"></div>
+            <div className="space-y-24">
+              <MotionDiv
+                whileHover={{ x: 10 }}
+                className="relative"
+              >
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-synapse-gold rounded-full"></div>
+                <div className="w-1/2 ml-auto pl-8">
+                  <h3 className="heading-3 mb-4">März 2025</h3>
+                  <p className="text-body">
+                    Bewerbungen für das Beta-Programm starten
+                  </p>
+                </div>
+              </MotionDiv>
+
+              <MotionDiv
+                whileHover={{ x: -10 }}
+                className="relative"
+              >
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-synapse-gold rounded-full"></div>
+                <div className="w-1/2 pr-8">
+                  <h3 className="heading-3 mb-4">April 2025</h3>
+                  <p className="text-body">
+                    Erste Beta-Tester werden onboarded
+                  </p>
+                </div>
+              </MotionDiv>
+
+              <MotionDiv
+                whileHover={{ x: 10 }}
+                className="relative"
+              >
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-synapse-gold rounded-full"></div>
+                <div className="w-1/2 ml-auto pl-8">
+                  <h3 className="heading-3 mb-4">August 2025</h3>
+                  <p className="text-body">
+                    Beta-Test-Programm endet
+                  </p>
+                </div>
+              </MotionDiv>
+
+              <MotionDiv
+                whileHover={{ x: -10 }}
+                className="relative"
+              >
+                <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-synapse-gold rounded-full"></div>
+                <div className="w-1/2 pr-8">
+                  <h3 className="heading-3 mb-4">September 2025</h3>
+                  <p className="text-body">
+                    Offizieller Launch mit Ihrem Feedback
+                  </p>
+                </div>
+              </MotionDiv>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Requirements */}
+      <section className="section bg-gray-50">
+        <div className="container-full">
+          <h2 className="heading-2 text-center mb-12">Anforderungen für Beta-Tester</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <MotionDiv
+              whileHover={{ y: -5 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-synapse-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="heading-3 mb-4">Zeitaufwand</h3>
+              <p className="text-body">
+                2-3 Stunden pro Woche für Tests und Feedback
+              </p>
+            </MotionDiv>
+
+            <MotionDiv
+              whileHover={{ y: -5 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-synapse-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="heading-3 mb-4">Geräteanforderungen</h3>
+              <p className="text-body">
+                iOS 15+ oder Android 8+ Gerät
+              </p>
+            </MotionDiv>
+
+            <MotionDiv
+              whileHover={{ y: -5 }}
+              className="text-center"
+            >
+              <div className="w-16 h-16 bg-synapse-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                </svg>
+              </div>
+              <h3 className="heading-3 mb-4">Kommunikation</h3>
+              <p className="text-body">
+                Deutschkenntnisse für Feedback und Interviews
+              </p>
+            </MotionDiv>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="section">
+        <div className="container-full text-center">
+          <h2 className="heading-2 mb-6">Bereit mitzumachen?</h2>
+          <p className="text-body mb-8 max-w-2xl mx-auto">
+            Gestalten Sie die Zukunft der Beziehungsoptimierung mit. Bewerben Sie sich jetzt für unser Beta-Programm.
           </p>
           <a
-            href="mailto:beta@synapse.ai"
-            className="inline-block bg-synapse-gold text-white px-6 py-3 rounded-full hover:bg-synapse-lime transition-colors"
+            href="mailto:beta@sen.studio"
+            className="inline-block bg-synapse-gold text-white px-8 py-3 rounded-full hover:bg-synapse-lime transition-colors"
           >
-            Jetzt bewerben
+            Als Beta-Tester bewerben
           </a>
-        </MotionDiv>
-      </div>
+        </div>
+      </section>
     </main>
   )
 } 
